@@ -83,9 +83,7 @@ This includes when the number of repeats is `auto-fill` or `auto-fit` to create 
     <th align="left">Tracking bugs</th>
   </tr>
   <tr valign="top">
-    <td>
-      
-    </td>
+    <td></td>
     <td>
      Firefox
      <br>Chrome
