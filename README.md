@@ -2,7 +2,7 @@
 
 Inspired by [Flexbugs](https://github.com/philipwalton/flexbugs) this list aims to be a community curated list of CSS Grid Layout bugs, incomplete implementations and interop issues. [Grid shipped into browsers](https://gridbyexample.com/browsers) in a highly interoperable state, however there are a few issues - let's document any we find here.
 
-While I'd like to focus on issues relating to the [Grid Specification](https://drafts.csswg.org/css-grid/) here, it is likely that related specs such as Box Alignment will need to be referenced. If you think you have spotted an issue and it seems to relate to Grid, post it. We can work out the details together and make sure browser or spec issues get logged in the right place.
+While I'd like to focus on issues relating to the [Grid Specification](https://drafts.csswg.org/css-grid/) here, it is likely that related specs such as Box Alignment will need to be referenced. If you think you have spotted an issue and it seems to relate to Grid, [post it](https://github.com/rachelandrew/gridbugs/issues). We can work out the details together and make sure browser or spec issues get logged in the right place.
 
 
 ## The bugs
@@ -183,4 +183,4 @@ Gridbugs is maintained by @rachelandrew and was heavily inspired by the excellen
 
 ## Contributing
 
-In the first instance raise an Issue, include a Reduced Test Case that demonstrates the problem clearly. If you are aware of a workaround for the problem, add that too.
+In the first instance [raise an Issue](https://github.com/rachelandrew/gridbugs/issues), include a Reduced Test Case that demonstrates the problem clearly. If you are aware of a workaround for the problem, add that too.
