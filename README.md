@@ -118,6 +118,10 @@ There is limited fragmentation support across browsers at present, therefore fea
   </tr>
 </table>
 
+In Firefox images with an intrinsic size are scaling down to fit into a fixed size grid track, rather than overflowing.
+
+I believe that the correct behavior is to overflow, as per the CSS WG resolution of [Issue 523](https://github.com/w3c/csswg-drafts/issues/523#issuecomment-300539109).
+
 ### 5. Items with an intrinsic aspect ratio should align start
 
 <table>
@@ -139,6 +143,8 @@ There is limited fragmentation support across browsers at present, therefore fea
 </table>
 
 In Safari 10, a grid item that has an intrinsic aspect ratio was defaulting to `stretch`, rather than `start`.
+
+#### Workaround
 
 The workaround for this is to declare `align-self: start` and `justify-self: start` on the item.
 
