@@ -91,9 +91,7 @@ This includes when the number of repeats is `auto-fill` or `auto-fit` to create 
     </td>
     <td>
       <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1266265">Firefox #1266265</a><br>
-      <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=614667">Chrome #614667</a>
-      
-    </td>
+      <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=614667">Chrome #614667</a></td>
   </tr>
 </table>
 
@@ -136,9 +134,7 @@ There is limited fragmentation support across browsers at present, therefore fea
     <td>
      Safari 10 (fixed in Technical Preview)
     </td>
-    <td>
-     
-    </td>
+    <td></td>
   </tr>
 </table>
 
@@ -161,9 +157,7 @@ The workaround for this is to declare `align-self: start` and `justify-self: sta
     <td>
      Safari 10 (fixed in Technical Preview)
        </td>
-    <td>
-     
-    </td>
+    <td></td>
   </tr>
 </table>
 
