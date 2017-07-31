@@ -6,6 +6,10 @@ While I'd like to focus on issues relating to the [Grid Specification](https://d
 
 _Also, please raise an issue if I am wrong about any of these_ or you have more info or examples to add. Quite possibly I've pointed the finger at the wrong UA or missed a change in the spec. Help to make the list accurate appreciated!
 
+## This is not CSS Grid technical support
+
+Please raise issues about interop issues where you have already been through the process of creating a **Reduced Test Case** to check that the issue isn't something in your code. If you want to learn about CSS Grid Layout then check out [Grid by Example](https://gridbyexample.com) where I have video tutorials, small examples and links to other resources. I will answer more general grid questions on my [AMA](https://github.com/rachelandrew/cssgrid-ama) when time allows. I also have information regarding [fallbacks for older browsers](https://rachelandrew.co.uk/archives/2017/07/04/is-it-really-safe-to-start-using-css-grid-layout/).
+
 
 ## The bugs
 
@@ -16,6 +20,7 @@ _Also, please raise an issue if I am wrong about any of these_ or you have more 
 5. [Items with an intrinsic aspect ratio should align start](#5-items-with-an-intrinsic-aspect-ratio-should-align-start)
 6. [The `grid-gap` property should accept percentage values](#6-the-grid-gap-property-should-accept-percentage-values)
 7. [Grid gaps should behave as auto-sized tracks?](#7-grid-gaps-should-behave-as-auto-sized-tracks)
+8. [Setting max-height to a percentage should scale down a larger image inside a grid track](#8-setting-max-height-to-a-percentage-should-scale-down-a-larger-image-inside-a-grid-track)
 
 
 ### 1. `grid-auto-rows` and `grid-auto-columns` should accept a track listing
@@ -180,6 +185,27 @@ There is also an interop issue with regard to percentage `grid-row-gap` values, 
 
 - [Example 7.1](https://codepen.io/rachelandrew/pen/xLZbMm)
 - [CSS WG discussion](https://github.com/w3c/csswg-drafts/issues/509#issuecomment-318812608)
+
+### 8. Setting max-height to a percentage should scale down a larger image inside a grid track
+
+<table>
+  <tr>
+    <th align="left">Demos</th>
+    <th align="left">Browsers affected</th>
+    <th align="left">Tracking bugs</th>
+  </tr>
+  <tr valign="top">
+    <td>
+      <a href="https://codepen.io/rachelandrew/pen/YxqVNz">8.1</a> &mdash; <em>bug</em>
+    </td>
+    <td>
+    Chrome
+       </td>
+    <td>
+      <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=750631">Chromium #750631</a>
+    </td>
+  </tr>
+</table>
 
 ## Acknowledgments
 
