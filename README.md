@@ -207,6 +207,8 @@ There is also an interop issue with regard to percentage `grid-row-gap` values, 
   </tr>
 </table>
 
+Using `max-height` on an image inside a fixed size track should resolve so that the image scales down to fit inside the track. Currently in Chrome this does not work and so the image overflows. Using `max-width` works when the image is constrained by the column track sizing, setting a fixed height works as expected as does setting a max-height using a length unit such as `px`.
+
 ## Acknowledgments
 
 Gridbugs is maintained by @rachelandrew and was heavily inspired by the excellent [Flexbugs](https://github.com/philipwalton/flexbugs). 
