@@ -163,9 +163,11 @@ The workaround for this is to declare `align-self: start` and `justify-self: sta
       <a href="https://codepen.io/rachelandrew/pen/QMjPXq">6.1</a> &mdash; <em>bug</em>
     </td>
     <td>
-     Safari 10 (fixed in Technical Preview)
+     Safari 10 (fixed in <a href="https://developer.apple.com/safari/technology-preview/release-notes/#r29">Technical Preview 29</a>)
        </td>
-    <td></td>
+    <td>
+      <a href="https://bugs.webkit.org/show_bug.cgi?id=170764">WebKit #170764</a>
+    </td>
   </tr>
 </table>
 
