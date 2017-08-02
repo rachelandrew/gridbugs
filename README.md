@@ -253,7 +253,7 @@ The workaround for this is to use the prefixed `-webkit-min-content`, `-webkit-m
     Chrome<br>
      Safari 10 (fieldset fixed in Technology Preview)
     </td>
-    <td><a href=""></a></td>
+    <td><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=375693">Chromium #375693</a></td>
   </tr>
 </table>
 
