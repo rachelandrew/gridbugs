@@ -23,6 +23,7 @@ Please raise issues about interop issues where you have already been through the
 8. [Setting max-height to a percentage should scale down a larger image inside a grid track](#8-setting-max-height-to-a-percentage-should-scale-down-a-larger-image-inside-a-grid-track)
 9. [`min-content` and `max-content` in track listings](#9-min-content-and-max-content-in-track-listings)
 10. [Some HTML elements can't be grid containers](#10-some-html-elements-cant-be-grid-containers)
+11. [A textarea that is a grid item collapses to zero width](#11-a-textarea-that-is-a-grid-item-collapses-to-zero-width)
 
 
 ### 1. `grid-auto-rows` and `grid-auto-columns` should accept a track listing
@@ -259,6 +260,26 @@ The workaround for this is to use the prefixed `-webkit-min-content`, `-webkit-m
 
 In Chrome (and Safari 10) fieldset elements with `display: grid` do not act as grid containers. The button element only functions as a grid container in Firefox. This is related to the same issue in Flexbox, [detailed on the Flexbugs site](https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers).
 
+### 11. A textarea that is a grid item collapses to zero width
+
+<table>
+  <tr>
+    <th align="left">Demos</th>
+    <th align="left">Browsers affected</th>
+    <th align="left">Tracking bugs</th>
+  </tr>
+  <tr valign="top">
+    <td>
+      <a href="https://yuheiy.github.io/pub/textarea-in-grid.html">11.1</a> &mdash; <em>bug</em>
+    </td>
+    <td>
+    Chrome (on OSX only)
+    </td>
+    <td><a href=" https://bugs.chromium.org/p/chromium/issues/detail?id=727076">Chromium #727076</a></td>
+  </tr>
+</table>
+
+On OS X Chrome, if a textarea is a grid item it collapses to 0 width when text is typed into it. _Linked to test case from the Chromium issue as due to the way CodePen loads into an iframe this doesn't seem to happen there._
 
 ## Acknowledgments
 
