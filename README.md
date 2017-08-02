@@ -22,6 +22,7 @@ Please raise issues about interop issues where you have already been through the
 7. [Grid gaps should behave as auto-sized tracks?](#7-grid-gaps-should-behave-as-auto-sized-tracks)
 8. [Setting max-height to a percentage should scale down a larger image inside a grid track](#8-setting-max-height-to-a-percentage-should-scale-down-a-larger-image-inside-a-grid-track)
 9. [`min-content` and `max-content` in track listings](#9-min-content-and-max-content-in-track-listings)
+10. [Some HTML elements can't be grid containers](#10-some-html-elements-cant-be-grid-containers)
 
 
 ### 1. `grid-auto-rows` and `grid-auto-columns` should accept a track listing
@@ -234,6 +235,30 @@ In Safari 10, the values `min-content`, `max-content` and `fit-content` were pre
 #### Workaround
 
 The workaround for this is to use the prefixed `-webkit-min-content`, `-webkit-max-content` and `-webkit-fit-content`.
+
+### 10. Some HTML elements can't be grid containers
+
+<table>
+  <tr>
+    <th align="left">Demos</th>
+    <th align="left">Browsers affected</th>
+    <th align="left">Tracking bugs</th>
+  </tr>
+  <tr valign="top">
+    <td>
+      <a href="https://codepen.io/rachelandrew/pen/dzXwRJ">10.1</a> &mdash; <em>bug (fieldset)</em><br>
+      <a href="https://codepen.io/rachelandrew/pen/dzXwRJ">10.2</a> &mdash; <em>bug (button)</em>
+    </td>
+    <td>
+    Chrome<br>
+     Safari 10 (fixed in Technology Preview)
+    </td>
+    <td><a href=""></a></td>
+  </tr>
+</table>
+
+In Chrome (and Safari 10) fieldset elements with `display: grid` do not act as grid containers. The button element only functions as a grid container in Firefox. This is related to the same issue in Flexbox, [detailed on the Flexbugs site](https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers).
+
 
 ## Acknowledgments
 
