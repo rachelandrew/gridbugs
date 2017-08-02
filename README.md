@@ -251,7 +251,7 @@ The workaround for this is to use the prefixed `-webkit-min-content`, `-webkit-m
     </td>
     <td>
     Chrome<br>
-     Safari 10 (fixed in Technology Preview)
+     Safari 10 (fieldset fixed in Technology Preview)
     </td>
     <td><a href=""></a></td>
   </tr>
