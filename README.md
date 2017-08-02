@@ -21,6 +21,7 @@ Please raise issues about interop issues where you have already been through the
 6. [The `grid-gap` property should accept percentage values](#6-the-grid-gap-property-should-accept-percentage-values)
 7. [Grid gaps should behave as auto-sized tracks?](#7-grid-gaps-should-behave-as-auto-sized-tracks)
 8. [Setting max-height to a percentage should scale down a larger image inside a grid track](#8-setting-max-height-to-a-percentage-should-scale-down-a-larger-image-inside-a-grid-track)
+9. [`min-content` and `max-content` in track listings](#9-min-content-and-max-content-in-track-listings)
 
 
 ### 1. `grid-auto-rows` and `grid-auto-columns` should accept a track listing
@@ -209,9 +210,35 @@ There is also an interop issue with regard to percentage `grid-row-gap` values, 
 
 Using `max-height` on an image inside a fixed size track should resolve so that the image scales down to fit inside the track. Currently in Chrome this does not work and so the image overflows. Using `max-width` works when the image is constrained by the column track sizing, setting a fixed height works as expected as does setting a max-height using a length unit such as `px`.
 
+### 9. `min-content` and `max-content` in track listings
+
+<table>
+  <tr>
+    <th align="left">Demos</th>
+    <th align="left">Browsers affected</th>
+    <th align="left">Tracking bugs</th>
+  </tr>
+  <tr valign="top">
+    <td>
+      <a href="https://codepen.io/rachelandrew/pen/LjprNE">5.1</a> &mdash; <em>bug</em><br>
+      <a href="https://codepen.io/rachelandrew/pen/prjQRz">5.2</a> &mdash; <em>workaround</em>
+    </td>
+    <td>
+     Safari 10 (fixed in Technology Preview)
+    </td>
+    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=169195">WebKit #169195</a></td>
+  </tr>
+</table>
+
+In Safari 10, the values `min-content`, `max-content` and `fit-content` were prefixed. These have now been unprefixed in Safari Technology Preview.
+
+#### Workaround
+
+The workaround for this is to use the prefixed `-webkit-min-content`, `-webkit-max-content` and `-webkit-fit-content`.
+
 ## Acknowledgments
 
-Gridbugs is maintained by @rachelandrew and was heavily inspired by the excellent [Flexbugs](https://github.com/philipwalton/flexbugs). 
+Gridbugs is maintained by [@rachelandrew](https://twitter.com/rachelandrew) and was heavily inspired by the excellent [Flexbugs](https://github.com/philipwalton/flexbugs). 
 
 ## Contributing
 
