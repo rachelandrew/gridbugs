@@ -220,8 +220,7 @@ Using `max-height` on an image inside a fixed size track should resolve so that 
   </tr>
   <tr valign="top">
     <td>
-      <a href="https://codepen.io/rachelandrew/pen/LjprNE">5.1</a> &mdash; <em>bug</em><br>
-      <a href="https://codepen.io/rachelandrew/pen/prjQRz">5.2</a> &mdash; <em>workaround</em>
+      <a href="https://codepen.io/rachelandrew/pen/eEzbpN">9.1</a> &mdash; <em>bug</em>
     </td>
     <td>
      Safari 10 (fixed in Technology Preview)
