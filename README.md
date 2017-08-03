@@ -24,6 +24,7 @@ Please raise issues about interop issues where you have already been through the
 9. [`min-content` and `max-content` in track listings](#9-min-content-and-max-content-in-track-listings)
 10. [Some HTML elements can't be grid containers](#10-some-html-elements-cant-be-grid-containers)
 11. [A textarea that is a grid item collapses to zero width](#11-a-textarea-that-is-a-grid-item-collapses-to-zero-width)
+12. [Space distributed to empty tracks spanned by an item with content](#12-space-distributed-to-empty-tracks-spanned-by-an-item-with-content)
 
 
 ### 1. `grid-auto-rows` and `grid-auto-columns` should accept a track listing
@@ -280,6 +281,31 @@ In Chrome (and Safari 10) fieldset elements with `display: grid` do not act as g
 </table>
 
 On OS X Chrome, if a textarea is a grid item it collapses to 0 width when text is typed into it. _Linked to test case from the Chromium issue as due to the way CodePen loads into an iframe this doesn't seem to happen there._
+
+### 12. Space distributed to empty tracks spanned by an item with content
+
+<table>
+  <tr>
+    <th align="left">Demos</th>
+    <th align="left">Browsers affected</th>
+    <th align="left">Tracking bugs</th>
+  </tr>
+  <tr valign="top">
+    <td>
+      <a href="https://codepen.io/rachelandrew/pen/vJXJQr">12.1</a> &mdash; <em>bug 1</em><br>
+      <a href="https://codepen.io/rachelandrew/pen/aymLmq">12.2</a> &mdash; <em>bug 2</em>
+    </td>
+    <td>
+    Firefox
+    </td>
+    <td><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1386921">Firefox #1386921</a><br>
+    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1386932">Firefox #1386932</a></td>
+  </tr>
+</table>
+
+If you have a grid with empty tracks which are spanned by an item on the grid, those tracks should not be assigned extra space due to the spanning item. Firefox is assigning extra space (bug 1), related is the fact that Firefox does different things depending on source order (bug 2).
+
+Thanks to everyone who helped to isolate these issues [here](https://github.com/rachelandrew/gridbugs/issues/2). The discussion is useful if you want to understand exactly what is going on.
 
 ## Acknowledgments
 
