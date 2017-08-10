@@ -34,6 +34,7 @@ Please raise issues about interop issues where you have already been through the
     <th align="left">Demos</th>
     <th align="left">Browsers affected</th>
     <th align="left">Tracking bugs</th>
+    <th align="left">Tests</th>
   </tr>
   <tr valign="top">
     <td>
@@ -45,6 +46,7 @@ Please raise issues about interop issues where you have already been through the
     <td>
       <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1339672">Firefox #1339672</a>
     </td>
+    <td><a href="https://github.com/w3c/web-platform-tests/blob/master/css/css-grid-1/implicit-grids/grid-support-grid-auto-columns-rows-002.html">WPT</a></td>
   </tr>
 </table>
 
