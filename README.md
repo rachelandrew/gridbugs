@@ -25,6 +25,8 @@ Please raise issues about interop issues where you have already been through the
 10. [Some HTML elements can't be grid containers](#10-some-html-elements-cant-be-grid-containers)
 11. [A textarea that is a grid item collapses to zero width](#11-a-textarea-that-is-a-grid-item-collapses-to-zero-width)
 12. [Space distributed to empty tracks spanned by an item with content](#12-space-distributed-to-empty-tracks-spanned-by-an-item-with-content)
+13. [Inconsistency with percentage padding and margins](#13-inconsistency-with-percentage-padding-and-margins)
+14. [fit-content is stretching](#14-fit-content-is-stretching)
 
 
 ### 1. `grid-auto-rows` and `grid-auto-columns` should accept a track listing
@@ -308,6 +310,56 @@ On OS X Chrome, if a textarea is a grid item it collapses to 0 width when text i
 If you have a grid with empty tracks which are spanned by an item on the grid, those tracks should not be assigned extra space due to the spanning item. Firefox is assigning extra space (bug 1), related is the fact that Firefox does different things depending on source order (bug 2).
 
 Thanks to everyone who helped to isolate these issues [here](https://github.com/rachelandrew/gridbugs/issues/2). The discussion is useful if you want to understand exactly what is going on.
+
+### 13. Inconsistency with percentage padding and margins
+
+<table>
+  <tr>
+    <th align="left">Demos</th>
+    <th align="left">Browsers affected</th>
+    <th align="left">Tracking bugs</th>
+  </tr>
+  <tr valign="top">
+    <td>
+      <a href="https://codepen.io/rachelandrew/pen/brYXNQ">13.1 &mdash; <em>bug</em></a>
+    </td>
+    <td>
+    Firefox &amp; Edge match<br>
+    Chrome &amp Webkit match
+    </td>
+    <td><href="https://bugs.chromium.org/p/chromium/issues/detail?id=229568">Chrome #229568</a></td>
+  </tr>
+</table>
+
+As detailed by @mrego there is [a longstanding interoperability issue with percentage padding and margins in both Grid and Flexbox](https://github.com/rachelandrew/gridbugs/issues/7). 
+
+Firefox and Edge (Preview) resolve the percentage margins/paddings on items against their respective dimension (width or height), Chrome always uses width, in the same way that percentages are resolved in block layout. The [specification allows for both possibilities](https://drafts.csswg.org/css-grid/#item-margins), and suggests authors do not use percentage margins and padding.
+
+### 14. fit-content is stretching
+
+<table>
+  <tr>
+    <th align="left">Demos</th>
+    <th align="left">Browsers affected</th>
+    <th align="left">Tracking bugs</th>
+  </tr>
+  <tr valign="top">
+    <td>
+      <a href="https://codepen.io/rachelandrew/pen/WEXBMR">14.1 &mdash; <em>bug</em></a>
+    </td>
+    <td>
+    Chrome<br>
+    Webkit
+    </td>
+    <td><href="https://bugs.chromium.org/p/chromium/issues/detail?id=755994">Chrome #755994</a></td>
+  </tr>
+</table>
+
+Report by @simevidas [Chrome is stretched tracks sized with fit-content](https://github.com/rachelandrew/gridbugs/issues/9) where Firefox does not. I believe that Firefox is displaying the correct behaviour here and the tracks should be clamped to the length value if the content would exceed that value. Edge (Preview) matches the behaviour in Firefox.
+
+#### Workaround
+
+The workaround for this is to use `justify-content: start` or `justify-content: end` on the tracks.
 
 ## Acknowledgments
 
