@@ -342,6 +342,7 @@ Firefox and Edge (Preview) resolve the percentage margins/paddings on items agai
     <th align="left">Demos</th>
     <th align="left">Browsers affected</th>
     <th align="left">Tracking bugs</th>
+    <th align="left">Tests</th>
   </tr>
   <tr valign="top">
     <td>
@@ -351,11 +352,15 @@ Firefox and Edge (Preview) resolve the percentage margins/paddings on items agai
     Chrome<br>
     Webkit
     </td>
-    <td><href="https://bugs.chromium.org/p/chromium/issues/detail?id=755994">Chrome #755994</a></td>
+    <td><href="https://bugs.chromium.org/p/chromium/issues/detail?id=755994">Chrome #755994</a><br>
+    <a href="https://github.com/w3c/csswg-drafts/issues/1732">CSS Spec issue #1732</a></td>
+    <td><a href="https://github.com/w3c/web-platform-tests/blob/master/css/css-grid-1/alignment/grid-fit-content-tracks-dont-stretch-001.html">WPT</a></td>
   </tr>
 </table>
 
-Report by @simevidas [Chrome is stretched tracks sized with fit-content](https://github.com/rachelandrew/gridbugs/issues/9) where Firefox does not. I believe that Firefox is displaying the correct behaviour here and the tracks should be clamped to the length value if the content would exceed that value. Edge (Preview) matches the behaviour in Firefox.
+Report by @simevidas [Chrome is stretched tracks sized with fit-content](https://github.com/rachelandrew/gridbugs/issues/9) where Firefox does not. Edge (Preview) matches the behaviour in Firefox.
+
+It turned out this is less straightforward than first appeared. [See the discussion on the issue raised against the CSS spec](https://github.com/w3c/csswg-drafts/issues/1732). During the telecon on September 20, 2017 the CSS WG resolved that tracks should not stretch, making the Firefox/Edge behaviour correct. [The next day a patch was submitted to Blink](https://bugs.chromium.org/p/chromium/issues/detail?id=755994#c6) to fix the issue in Chrome.
 
 #### Workaround
 
