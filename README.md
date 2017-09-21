@@ -352,7 +352,7 @@ Firefox and Edge (Preview) resolve the percentage margins/paddings on items agai
     Chrome<br>
     Webkit
     </td>
-    <td><href="https://bugs.chromium.org/p/chromium/issues/detail?id=755994">Chrome #755994</a><br>
+    <td><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=755994">Chrome #755994</a><br>
     <a href="https://github.com/w3c/csswg-drafts/issues/1732">CSS Spec issue #1732</a></td>
     <td><a href="https://github.com/w3c/web-platform-tests/blob/master/css/css-grid-1/alignment/grid-fit-content-tracks-dont-stretch-001.html">WPT</a></td>
   </tr>
